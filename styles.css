@@ -224,7 +224,11 @@ Card Project
 .card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 200px 1fr auto;
+}
+
+.card img {
+  height: 100%;
 }
 
 .cards-center {
