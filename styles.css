@@ -1,3 +1,229 @@
-body {
-  background: red;
+/*
+============
+Variables
+============
+*/
+
+:root {
+  --primaryColor: rgb(61, 43, 6);
+  --mainBlack: #222;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --darkGrey: #afafaf;
+  --headerBack: rgb(214, 197, 148);
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.2rem;
 }
+
+/*
+============
+Global Styles
+============
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  color: var(--mainBlack);
+  background-color: var(--mainWhite);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+
+/* Button */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 3px solid var(--headerBack);
+  color: var(--primaryColor);
+  margin: 3rem;
+  transition: var(--mainTransition);
+}
+
+.btn:hover {
+  background: var(--headerBack);
+  color: var(--mainWhite);
+}
+
+/*
+============
+Main Navbar
+============
+*/
+
+.main-navbar {
+  background: var(--headerBack);
+  padding: 1rem 2rem;
+}
+
+.main-navbar li {
+  list-style: none;
+}
+
+.main-navbar a {
+  text-transform: capitalize;
+  display: block;
+  color: var(--primaryColor);
+  padding: 1rem 0;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+}
+
+.main-navbar a:hover {
+  color: var(--mainWhite);
+}
+
+@media screen and (min-width: 992px) {
+  .main-navbar ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-navbar a {
+    text-align: center;
+  }
+}
+
+/*
+============
+Hero Project
+============
+*/
+
+.hero-header {
+  min-height: 100vh;
+  background: var(--primaryColor);
+  color: var(--headerBack);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .hero-banner {
+  /* background-color: var(--headerBack);
+  text-align: center; 
+} */
+
+.hero-banner p {
+  width: 80%;
+  max-width: 560px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-header {
+    background: linear-gradient(rgba(214, 197, 148, 0.1), rgba(61, 43, 6, 0.95)),
+      url("/images/image-2.jpeg") center/cover fixed;
+  }
+}
+
+/*
+============
+Card Project
+============
+*/
+
+.title {
+  text-align: center;
+}
+
+.cards {
+  padding: 4rem 0;
+}
+
+.cards-center {
+  width: 80vw;
+  max-width: 1170px;
+  margin: 2rem auto;
+}
+
+.card {
+  border: 1px solid var(--darkGrey);
+  margin-bottom: 3rem;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-footer {
+  background-color: var(--darkGrey);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.card-footer span {
+  color: var(--primaryColor);
+}
+
+.card-footer span:hover {
+  color: var(--mainWhite);
+}
+/*
+@media screen and (min-width: 768px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .cards-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+*/
+
+.cards-center {
+  display: grid;
+  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+}
+/* 1170 - 64 */
