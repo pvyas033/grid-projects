@@ -157,7 +157,7 @@ Hero Project
 @media screen and (min-width: 768px) {
   .hero-header {
     background: linear-gradient(rgba(214, 197, 148, 0.1), rgba(61, 43, 6, 0.95)),
-      url("/images/image-2.jpeg") center/cover fixed;
+      url("images/image-2.jpeg") center/cover fixed;
   }
 }
 
@@ -224,6 +224,6 @@ Card Project
 .cards-center {
   display: grid;
   column-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
 }
 /* 1170 - 64 */
