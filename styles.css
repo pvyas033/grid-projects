@@ -221,6 +221,12 @@ Card Project
 }
 */
 
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
 .cards-center {
   display: grid;
   column-gap: 2rem;
