@@ -91,6 +91,11 @@ Main Navbar
 .main-navbar {
   background: var(--headerBack);
   padding: 1rem 2rem;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-navbar li {
@@ -98,6 +103,7 @@ Main Navbar
 }
 
 .main-navbar a {
+  font-size: 3rem;
   text-transform: capitalize;
   display: block;
   color: var(--primaryColor);
@@ -114,8 +120,6 @@ Main Navbar
   .main-navbar ul {
     max-width: 1170px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
   }
   .main-navbar a {
     text-align: center;
